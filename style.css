@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    background-color: #000;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* ESTILO CABEÇALHO */
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 999999;
+    padding: 40px 0;
+}
+
+header .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logotipo{
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+header nav.menu ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+nav.menu ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* ESTILO DO  SLIDER */
+.slider{
+    height: 100vh;
+    position: relative;
+}
+
+.slider .slider-container .slider-box{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+.slider .slider-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slider-box::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #000, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider .slider-box .txt-slider{
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    color: #fff;
+    z-index: 1;
+    width: 80%;
+    max-width: 600px;
+}
+
+.slider .slider-box .txt-slider h2{
+    font-size: 5rem;
+}
+
+@keyframes animaTexto{
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slider .slider-box.ativo h2, .slider .slider-box.ativo p{
+    transform: translateY(60px);
+    opacity: 0;
+    animation: animaTexto .5s ease-in-out .7s forwards;
+}
+
+.slider .slider-box.ativo h2{
+    animation-delay: 1s;
+}
+
+.slider-container .slider-box.ativo{
+    opacity: 1;
+    z-index: 9999;
+}
+
+/* ESTILO DAS SETAS */
+.setas{
+    width: 100%;
+    height: 100%;
+    padding: 0 4%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+}
+
+.setas button{
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #747474;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: .5s;
+
+}
+
+.setas button:hover{
+    background-color: #fff;
+}
+
+/* ESTILO DOS BOTÕES DE NAVEGAÇÃO */
+.btn-nav-box{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-nav-box .btn-nav{
+    width: 50px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn-nav-box .btn-nav:hover{
+    background-color: #fff;
+}
+
+.btn-nav-box .btn-nav.ativo{
+    background-color: #fff;
+}
