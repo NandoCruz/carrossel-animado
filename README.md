@@ -1,5 +1,5 @@
 # carrossel-animado
- ##Projeto de um carrossel animado
+ ## Projeto de um carrossel animado
 
 ## Slider1
  ![Tela1](https://github.com/NandoCruz/carrossel-animado/blob/main/imagens/tela1.png)
